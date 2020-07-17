@@ -179,8 +179,12 @@ fetch(HOSTAPI_History)
                 scales: {
                     yAxes: [{
                         ticks: {
-                            min: 0
-
+                            beginAtZero: true,
+                            userCallback: function (label, index, labels) {
+                                if (Math.floor(label) === label) {
+                                    return label;
+                                }
+                            }
                         }
                     }]
 
@@ -253,8 +257,12 @@ fetch(HOSTAPI_History)
                 scales: {
                     yAxes: [{
                         ticks: {
-                            min: 0
-
+                            beginAtZero: true,
+                            userCallback: function (label, index, labels) {
+                                if (Math.floor(label) === label) {
+                                    return label;
+                                }
+                            }
                         }
                     }]
 
@@ -330,8 +338,12 @@ fetch(HOSTAPI_History)
                 scales: {
                     yAxes: [{
                         ticks: {
-                            min: 0
-
+                            beginAtZero: true,
+                            userCallback: function (label, index, labels) {
+                                if (Math.floor(label) === label) {
+                                    return label;
+                                }
+                            }
                         }
                     }]
 

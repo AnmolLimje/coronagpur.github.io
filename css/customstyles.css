@@ -1,6 +1,6 @@
 
 body {
-    background-image: url('/img/loader.gif');
+    background-image: url('../img/loader.gif');
     background-repeat: no-repeat;
     background-position: center 300px;
     position: absolute;
@@ -91,4 +91,9 @@ body {
 .custom-white{
     background: #F6F6F6;
 }
+
+.custom-greenAlpha{
+    background-color: rgba(0,200,0,0.1);
+}
+
 
