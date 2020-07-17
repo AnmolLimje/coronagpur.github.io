@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+  <link rel="stylesheet" href="/css/customstyles.css" />
+  <link rel="stylesheet" href="/chartjs-2.9.3/Chart.min.css" />
+  <title>CoroNagpur</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="jumbotron">
+      <h1 class="display-4" style="font-weight: 400;">
+        Corona Nagpur Tracker
+      </h1>
+      <p class="lead">
+        Track Corona Virus Nagpur Cases and Activity
+      </p>
+    </div>
+  </div>
+
+  <!--Main Highlight-->
+  <div class="container">
+    <div class="row">
+      <div class="col-sm">
+        <div class="highlight-box custom-active">
+          <h1 class="highlight-title">Active</h1>
+          <h1 id="active">0</h1>
+        </div>
+      </div>
+      <div class="col-sm">
+        <div class="highlight-box custom-green">
+          <h1 class="highlight-title">Recovered</h1>
+          <h1 id="cured">0</h1>
+        </div>
+      </div>
+      <div class="col-sm">
+        <div class="highlight-box custom-teal">
+          <h1 class="highlight-title">Infected</h1>
+          <h1 id="infected">0</h1>
+        </div>
+      </div>
+      <div class="col-sm">
+        <div class="highlight-box custom-red">
+          <h1 class="highlight-title">Deaths</h1>
+          <h1 id="death">0</h1>
+        </div>
+      </div>
+    </div>
+    <div class="row m-5">
+      <div class="col-sm">
+        <div class="highlight-box custom-total">
+          <h1 class="highlight-title">Total</h1>
+          <h1 id="total">0</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr>
+
+  <!--Main Highlight-->
+  <div class="container">
+    <h2 class="text-center">Daily New Cases</h2><br>
+    <h6 id="last_update" class="text-center" style="color: green;">Last Updated</h6><br>
+    <div class="row">
+      <div class="col-sm">
+        <div class="highlight-box custom-green">
+          <h1 class="highlight-title">Recovered</h1>
+          <h1 id="cured_newcase">0</h1>
+        </div>
+      </div>
+      <div class="col-sm">
+        <div class="highlight-box custom-teal">
+          <h1 class="highlight-title">Infected</h1>
+          <h1 id="infected_newcase">0</h1>
+        </div>
+      </div>
+
+      <div class="col-sm">
+        <div class="highlight-box custom-red">
+          <h1 class="highlight-title">Deaths</h1>
+          <h1 id="death_newcase">0</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <br>
+
+  <!--Table Data-->
+  <div class="container table-container">
+    <h2 class="table-title custom-white">Popular Area Wise</h2>
+    <div class="table-setup">
+      <table class="table borderless">
+        <thead>
+          <tr>
+            <th class="table-th"><span class="table-th-title">Place</span></th>
+            <th class="table-th"><span class="table-th-title">Cases</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row"><span class="table-td-title">Friends Colony</span></th>
+            <td><span class="table-td-title">0</td>
+          </tr>
+          <tr>
+            <th scope="row"><span class="table-td-title">Sadar</th>
+            <td><span class="table-td-title">0</td>
+          </tr>
+          <tr>
+            <th scope="row"><span class="table-td-title">Sitabuildi</th>
+            <td><span class="table-td-title">0</td>
+          </tr>
+          <tr>
+            <th scope="row"><span class="table-td-title">Mahal</th>
+            <td><span class="table-td-title">0</td>
+          </tr>
+          <tr>
+            <th scope="row"><span class="table-td-title">Dhantoli</th>
+            <td><span class="table-td-title">0</td>
+          </tr>
+          <tr>
+            <th scope="row"><span class="table-td-title">Itwari</span></th>
+            <td><span class="table-td-title">0</td>
+          </tr>
+          <tr>
+            <th scope="row"><span class="table-td-title">Mominpura</th>
+            <td><span class="table-td-title">0</td>
+          </tr>
+          <tr>
+            <th scope="row"><span class="table-td-title">Dharampeth</th>
+            <td><span class="table-td-title">0</td>
+          </tr>
+          <tr>
+            <th scope="row"><span class="table-td-title">Ramdaspeth</span></th>
+            <td><span class="table-td-title">0</td>
+          </tr>
+          <tr>
+            <th scope="row"><span class="table-td-title">ShraddhananPeth</th>
+            <td><span class="table-td-title">0</td>
+          </tr>
+          <tr>
+            <th scope="row"><span class="table-td-title">Civil Lines</th>
+            <td><span class="table-td-title">0</td>
+          </tr>
+          <tr>
+            <th scope="row"><span class="table-td-title">Gandhibagh</th>
+            <td><span class="table-td-title">0</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md">
+        <canvas id="confirmed_cases" width="100%" height="70px" style="margin-top: 50px;"></canvas>
+      </div>
+      <div class="col-md">
+        <canvas id="death_cases" width="100%" height="70px" style="margin-top: 50px;"></canvas>
+      </div>
+      <div class="col-md">
+        <canvas id="recovered_cases" width="100%" height="70px" style="margin-top: 50px;"></canvas>
+      </div>
+    </div>
+
+
+  </div>
+
+</body>
+<script src="/chartjs-2.9.3/Chart.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+  integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+  integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+  integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="/js/mainscript.js"></script>
+
+</html>

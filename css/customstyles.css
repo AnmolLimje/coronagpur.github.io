@@ -1,0 +1,94 @@
+
+body {
+    background-image: url('/img/loader.gif');
+    background-repeat: no-repeat;
+    background-position: center 300px;
+    position: absolute;
+    top: 0px;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 9999999;
+    opacity: 0.1;
+}
+
+.borderless td,
+    .borderless th {
+      border: none;
+      font-weight: lighter;
+    }
+
+/*For Main Title Boxes*/
+.highlight-box{
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.highlight-box > h1{
+    text-align: center;
+    color:aliceblue;
+}
+
+.highlight-box .highlight-title{
+    font-size: 2.5vh;
+}
+/**********************/
+
+/*Table Highlight*/
+.table-container{
+   margin: 0 auto;
+   text-align: center;
+   position:relative;
+}
+
+.table-title{
+    padding: 10px;
+    border-radius: 100px;
+}
+
+.table-setup{
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    height: 400px;
+    overflow: auto;
+}
+
+.table-th{
+    font-size: 23px;
+}
+
+.table-th-title{
+    font-weight: 400;
+}
+
+.table-td-title{
+    font-weight: 300;;
+}
+/**********************/
+
+/*Themes Background*/
+.custom-active{
+    background-color: #8fd4e9;
+}
+
+.custom-green{
+    background-color: #7EDF8F;
+}
+
+.custom-teal{
+    background-color: #82A4AE;
+}
+
+.custom-red{
+    background-color: #DB7171;
+}
+
+.custom-total{
+    background-color: #6472c0;
+}
+
+.custom-white{
+    background: #F6F6F6;
+}
+
