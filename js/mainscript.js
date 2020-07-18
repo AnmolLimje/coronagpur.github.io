@@ -1,6 +1,6 @@
-HOSTAPI = "http://anmolhub.online/services/wcf/CoronavirusIndia/CoronavirusIndia.svc/getData";
-HOSTAPI_Delta = "http://anmolhub.online/services/wcf/CoronavirusIndia/CoronavirusIndia.svc/getDeltaData";
-HOSTAPI_History = "http://anmolhub.online/services/wcf/CoronavirusIndia/CoronavirusIndia.svc/getHistoryCollection";
+HOSTAPI = "https://anmolhub.online/services/wcf/CoronavirusIndia/CoronavirusIndia.svc/getData";
+HOSTAPI_Delta = "https://anmolhub.online/services/wcf/CoronavirusIndia/CoronavirusIndia.svc/getDeltaData";
+HOSTAPI_History = "https://anmolhub.online/services/wcf/CoronavirusIndia/CoronavirusIndia.svc/getHistoryCollection";
 
 body = document.querySelector("body");
 
