@@ -1,6 +1,12 @@
+//Deployment
 HOSTAPI = "https://anmolhub.online/services/wcf/CoronavirusIndia/CoronavirusIndia.svc/getData";
 HOSTAPI_Delta = "https://anmolhub.online/services/wcf/CoronavirusIndia/CoronavirusIndia.svc/getDeltaData";
 HOSTAPI_History = "https://anmolhub.online/services/wcf/CoronavirusIndia/CoronavirusIndia.svc/getHistoryCollection";
+
+//Debugging
+//HOSTAPI = "http://localhost:50385/CoronavirusIndia.svc/getData";
+//HOSTAPI_Delta = "http://localhost:50385/CoronavirusIndia.svc/getDeltaData";
+//HOSTAPI_History = "http://localhost:50385/CoronavirusIndia.svc/getHistoryCollection";
 
 body = document.querySelector("body");
 
