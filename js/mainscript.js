@@ -10,39 +10,6 @@ HOSTAPI_History = "https://anmolhub.online/services/wcf/CoronavirusIndia/Coronav
 
 body = document.querySelector("body");
 
-
-/*window.onload = function () {
-    var chart = new CanvasJS.Chart("chartContainer", {
-        animationEnabled: true,
-        theme: "light2",
-        title: {
-            text: ""
-        },
-        axisY: {
-            includeZero: false
-        },
-        data: [{
-            type: "line",
-            indexLabelFontSize: 16,
-            dataPoints: [
-                { y: 1, indexLabel: "\u2193 lowest", markerColor: "DarkSlateGrey", markerType: "cross" },
-                { y: 2 },
-                { y: 10 },
-                { y: 20 },
-                { y: 45 },
-                { y: 50 },
-                { y: 48 },
-                { y: 48 },
-                { y: 41 },
-                { y: 50 },
-                { y: 121 },
-                { y: 127, indexLabel: "\u2191 highest", markerColor: "red", markerType: "triangle" }
-            ]
-        }]
-    });
-    chart.render();
-}*/
-
 fetch(HOSTAPI)
     .then((response) => {
         response.json().then((data) => {
@@ -193,7 +160,6 @@ fetch(HOSTAPI_History)
                             }
                         }
                     }]
-
                 }
             };
             var myLineChart = new Chart(ctx, {
