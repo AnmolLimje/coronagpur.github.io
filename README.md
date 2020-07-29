@@ -38,7 +38,13 @@ Tracking the Covid-19 Impact on Nagpur
 <p>We make it simpler as everyone can able to contribute.</p>
 <ul>
   <li>HTML & CSS</li>
-  <li>Javascript (To Fetch API)</li>
+  <li>Javascript (To Fetch API)
+    <ul>
+      <li>External Libraries
+        <ul><li>chartjs-2.9.3</li></ul>
+      </li>
+    </ul>
+  </li>
 </ul>
 <hr/>
 
