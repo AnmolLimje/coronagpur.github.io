@@ -58,7 +58,14 @@ Tracking the Covid-19 Impact on Nagpur
  </ul>
  <p>Contributions are handled in the form of <strong>Pull Request</strong>. In order to contribute you need to <b>fork</b> this repository and create a new branch. 
  Make relevant changes and submit a <b>Pull Request</b>, Once that's done we'll be able to review and merge them to the master branch.</p>
+ <hr/>
  
  <!--Points-->
  <h2><b>Remember to: </b></h2>
  <p>We are also tracking the visitors based on ip address as the information knows how much visitors are visiting our website. Don't try to remove it as we need to do analytics later on</p>
+ <hr/>
+ 
+ <!--Volunteer Needed-->
+ <h2><b>We Needing Information Based on Area-Wise Activity</b></h2>
+ <p>We need a volunteer who can get the information of <b>area-wise</b> acitivty and update it on directly <a href="https://docs.google.com/spreadsheets/d/1EAqiT-vKWVxGwe_8xk7fle5JzM1QYwGhgH_uLc-gpUA/edit?usp=sharing">Google Spreadsheet</a></p>
+ <p>Please Refer any person who knows the correct information based on area-wise acivity</p>
