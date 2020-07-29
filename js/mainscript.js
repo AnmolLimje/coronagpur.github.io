@@ -45,7 +45,13 @@ fetch(HOSTAPI_Delta)
             cured_newcase = document.querySelector("#cured_newcase");
             death_newcase = document.querySelector("#death_newcase");
 
-            last_update.innerHTML = "Last Updated On: " + nagpurdata.Updated;
+            message = "Last Updated On: ";
+            if (nagpurdata.Updated == null) {
+                message = "Not Updated Yet";
+            } else {
+                message += nagpurdata.Updated;
+            }
+            last_update.innerHTML = message;
             cured_newcase.innerHTML = nagpurdata.delta_recovered;
             infected_newcase.innerHTML = nagpurdata.delta_confirmed;
             death_newcase.innerHTML = nagpurdata.delta_deceased;
