@@ -44,7 +44,7 @@ Tracking the Covid-19 Impact on Nagpur
 
 <!--About Contribution-->
 <h2><b>About Contribution</b></h2>
-<p>For New contibuting to OpenSource on Github <a href="https://www.opensource.guide/how-to-contribute">Click Here</a></p>
+<p>For New contibuting to OpenSource on Github <a href="https://opensource.guide/how-to-contribute/">Click Here</a></p>
 <p>In order to contribute there are some recommended points to note</p>
 <ul>
   <li>We recommend contribution based from nagpur only as we only intention and target to show nagpur city based information.</li>
