@@ -49,6 +49,6 @@ Tracking the Covid-19 Impact on Nagpur
 <ul>
   <li>We recommend contribution based from nagpur only as we only intention and target to show nagpur city based information.</li>
   <li>In order to add more feature information you can able to use any api's or custom api's to display as long as information is correct</li>
- <ul>
+ </ul>
  <p>Contributions are handled in the form of <strong>Pull Request</strong>. In order to contribute you need to <b>fork</b> this repository and create a new branch. 
  Make relevant changes and submit a <b>Pull Request</b>, Once that's done we'll be able to review and merge them to the master branch.</p>
