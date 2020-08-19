@@ -2,7 +2,7 @@
 Tracking the Covid-19 Impact on Nagpur Including Official NMC Nagpur Data Integration
 
 <p align="center">
-  
+  <img src="https://anmolhub.online/coronagpur.github.io/repoother/coronagpur.PNG" width="100%">
 </p>
 <br/>
 <br/>
