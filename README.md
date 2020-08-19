@@ -1,5 +1,5 @@
 # coronagpur.github.io
-Tracking the Covid-19 Impact on Nagpur
+Tracking the Covid-19 Impact on Nagpur Including Official NMC Nagpur Data Integration
 
 <p align="center">
   <img src="https://anmolhub.online/coronagpur.github.io/repoother/coronagpur.PNG" width="100%">
@@ -29,6 +29,16 @@ Tracking the Covid-19 Impact on Nagpur
     <td>https://anmolhub.online/services/wcf/CoronavirusIndia/CoronavirusIndia.svc/getHistoryCollection</td>
     <td>GET</td>
     <td>Get the list of COVID-19 History</td>
+  </tr>
+  <tr>
+    <td>https://anmolhub.online/service/wcf/CoroNagpurOfficial/CoroNagpur/getTodayCases</td>
+    <td>GET</td>
+    <td>Get the Current Cases From NMC Data</td>
+  </tr>
+  <tr>
+    <td>https://anmolhub.online/service/wcf/CoroNagpurOfficial/CoroNagpur/getAreaWiseCasesList</td>
+    <td>GET</td>
+    <td>Get the AreaWise Cases From NMC Data</td>
   </tr>
 </table>
 <hr/>
