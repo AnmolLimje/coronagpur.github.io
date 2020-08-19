@@ -3,8 +3,8 @@ HOSTAPI = "https://anmolhub.online/services/wcf/CoronavirusIndia/CoronavirusIndi
 HOSTAPI_Delta = "https://anmolhub.online/services/wcf/CoronavirusIndia/CoronavirusIndia.svc/getDeltaData";
 HOSTAPI_History = "https://anmolhub.online/services/wcf/CoronavirusIndia/CoronavirusIndia.svc/getHistoryCollection";
 
-HOSTAPI_NMC_TodayCase = "http://anmolhub.online/service/wcf/CoroNagpurOfficial/CoroNagpur/getTodayCases";
-HOSTAPI_NMC_AreaWise = "http://anmolhub.online/service/wcf/CoroNagpurOfficial/CoroNagpur/getAreaWiseCasesList";
+HOSTAPI_NMC_TodayCase = "https://anmolhub.online/service/wcf/CoroNagpurOfficial/CoroNagpur/getTodayCases";
+HOSTAPI_NMC_AreaWise = "https://anmolhub.online/service/wcf/CoroNagpurOfficial/CoroNagpur/getAreaWiseCasesList";
 
 //Debugging
 //HOSTAPI = "http://localhost:50385/CoronavirusIndia.svc/getData";
