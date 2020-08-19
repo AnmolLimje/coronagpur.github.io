@@ -1,5 +1,6 @@
 //Visitors Impressions
 //Deployment
+HOSTAPI_GetTotalVisitors = "https://anmolhub.online/services/wcf/CoronavirusIndia/CoronavirusIndia.svc/getTotalVisitorsCount";
 HOSTAPI_GetVisitors = "https://anmolhub.online/services/wcf/CoronavirusIndia/CoronavirusIndia.svc/getVisitorsCount";
 HOSTAPI_analytics = "https://anmolhub.online/services/wcf/CoronavirusIndia/CoronavirusIndia.svc/visitidentification";
 
@@ -70,11 +71,11 @@ doWork().then((result) => {
 })
 
 
-fetch(HOSTAPI_GetVisitors)
+fetch(HOSTAPI_GetTotalVisitors)
     .then((response) => {
         response.json().then((data) => {
             //console.log("Visitors: ");
             //console.log(data.Visitors);
-            footerVisitors.innerHTML = "Daily Visitors: " + data.Visitors;
+            footerVisitors.innerHTML = "Visitors: " + data.Visitors;
         })
     })

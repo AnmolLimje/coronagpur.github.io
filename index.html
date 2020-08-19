@@ -28,6 +28,7 @@
 
   <!--Main Highlight-->
   <div class="container">
+    <h3 class="text-center my-5" style="font-weight: bold;">According to COVID19-India.org</h3>
     <div class="row">
       <div class="col-sm">
         <div class="highlight-box custom-active">
@@ -54,20 +55,19 @@
         </div>
       </div>
     </div>
-    <div class="row m-5">
+    <!--<div class="row m-5">
       <div class="col-sm">
         <div class="highlight-box custom-total">
           <h1 class="highlight-title">Total</h1>
           <h1 id="total">0</h1>
         </div>
       </div>
-    </div>
+    </div>-->
   </div>
-  <hr>
 
-  <!--Main Highlight-->
+  <!--Daily New Cases-->
   <div class="container">
-    <h2 class="text-center">Daily New Cases</h2><br>
+    <h2 class="text-center mt-5" style="font-size: 2.5vh;">Daily New Cases</h2><br>
     <h6 id="last_update" class="text-center" style="color: green;">Last Updated</h6><br>
     <div class="row">
       <div class="col-sm">
@@ -94,6 +94,79 @@
   <hr>
   <br>
 
+  <div class="container">
+    <h3 class="text-center" style="font-weight: bold;">According to Nagpur NMC</h3>
+    <div class="row m-5">
+      <div class="col-sm">
+        <div class="highlight-box custom-total">
+          <h1 class="highlight-title">Total Active</h1>
+          <h1 id="nmc_total_active">0</h1>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mt-2">
+      <div class="col-sm">
+        <div class="highlight-box custom-pos">
+          <h1 class="highlight-title">Positives</h1>
+          <h1 id="nmc_positive_commulative">0</h1>
+        </div>
+      </div>
+      <div class="col-sm">
+        <div class="highlight-box custom-green">
+          <h1 class="highlight-title">Recovered</h1>
+          <h1 id="nmc_recovered_commulative">0</h1>
+        </div>
+      </div>
+      <div class="col-sm">
+        <div class="highlight-box custom-neg">
+          <h1 class="highlight-title">Negatives</h1>
+          <h1 id="nmc_negative_commulative">0</h1>
+        </div>
+      </div>
+      <div class="col-sm">
+        <div class="highlight-box custom-red">
+          <h1 class="highlight-title">Deaths</h1>
+          <h1 id="nmc_death_commulative">0</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Daily New Cases-->
+  <div class="container">
+    <h2 class="text-center mt-5" style="font-size: 2.5vh;">Daily New Cases</h2><br>
+    <h6 id="nmc_last_update" class="text-center" style="color: green;">Last Updated On</h6><br>
+    <div class="row">
+      <div class="col-sm">
+        <div class="highlight-box custom-pos">
+          <h1 class="highlight-title">Positives</h1>
+          <h1 id="nmc_positive">0</h1>
+        </div>
+      </div>
+      <div class="col-sm">
+        <div class="highlight-box custom-green">
+          <h1 class="highlight-title">Recovered</h1>
+          <h1 id="nmc_recovered">0</h1>
+        </div>
+      </div>
+      <div class="col-sm">
+        <div class="highlight-box custom-neg">
+          <h1 class="highlight-title">Negatives</h1>
+          <h1 id="nmc_negative">0</h1>
+        </div>
+      </div>
+      <div class="col-sm">
+        <div class="highlight-box custom-red">
+          <h1 class="highlight-title">Deaths</h1>
+          <h1 id="nmc_death">0</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <br>
+
   <!--Table Data-->
   <div class="container table-container">
     <h2 class="table-title custom-white">Area Wise Activity</h2>
@@ -107,82 +180,31 @@
             <th class="table-th"><span class="table-th-title">Recovered</span></th>
           </tr>
         </thead>
-        <tbody>
-          <tr>
+        <tbody id="areaWiseData">
+          <!--<tr>
             <th scope="row"><span class="table-td-title">Satranjipura</th>
             <td><span class="table-td-title">123</td>
             <td><span class="table-td-title">15</td>
             <td><span class="table-td-title">662</td>
-          </tr>
-          <tr>
-            <th scope="row"><span class="table-td-title">Laxminagar</th>
-            <td><span class="table-td-title">210</td>
-            <td><span class="table-td-title">7</td>
-            <td><span class="table-td-title">394</td>
-          </tr>
-          <tr>
-            <th scope="row"><span class="table-td-title">Dharampeth</th>
-            <td><span class="table-td-title">153</td>
-            <td><span class="table-td-title">10</td>
-            <td><span class="table-td-title">80</td>
-          </tr>
-          <tr>
-            <th scope="row"><span class="table-td-title">Hanuman Nagar</th>
-            <td><span class="table-td-title">214</td>
-            <td><span class="table-td-title">15</td>
-            <td><span class="table-td-title">82</td>
-          </tr>
-          <tr>
-            <th scope="row"><span class="table-td-title">Dhantoli</th>
-            <td><span class="table-td-title">212</td>
-            <td><span class="table-td-title">10</td>
-            <td><span class="table-td-title">125</td>
-          </tr>
-          <tr>
-            <th scope="row"><span class="table-td-title">Nehru Nagar</th>
-            <td><span class="table-td-title">189</td>
-            <td><span class="table-td-title">13</td>
-            <td><span class="table-td-title">119</td>
-          </tr>
-          <tr>
-            <th scope="row"><span class="table-td-title">Gandhibag</th>
-            <td><span class="table-td-title">219</td>
-            <td><span class="table-td-title">30</td>
-            <td><span class="table-td-title">535</td>
-          </tr>
-          <tr>
-            <th scope="row"><span class="table-td-title">Lakadganj</th>
-            <td><span class="table-td-title">252</td>
-            <td><span class="table-td-title">13</td>
-            <td><span class="table-td-title">76</td>
-          </tr>
-          <tr>
-            <th scope="row"><span class="table-td-title">Ashinagar</th>
-            <td><span class="table-td-title">322</td>
-            <td><span class="table-td-title">19</td>
-            <td><span class="table-td-title">104</td>
-          </tr>
-          <tr>
-            <th scope="row"><span class="table-td-title">Mangalwari</th>
-            <td><span class="table-td-title">428</td>
-            <td><span class="table-td-title">19</td>
-            <td><span class="table-td-title">204</td>
-          </tr>
+          </tr>-->
         </tbody>
       </table>
     </div>
   </div>
+  <hr>
+  <br>
 
   <!--Chart Representation-->
   <div class="container">
+    <h3 class="text-center" style="font-weight: bold;">As per COVID19-India</h3>
     <div class="row">
-      <div class="col-md">
+      <div class="col">
         <canvas id="confirmed_cases" width="100%" height="70px" style="margin-top: 50px;"></canvas>
       </div>
-      <div class="col-md">
+      <div class="col">
         <canvas id="death_cases" width="100%" height="70px" style="margin-top: 50px;"></canvas>
       </div>
-      <div class="col-md">
+      <div class="col">
         <canvas id="recovered_cases" width="100%" height="70px" style="margin-top: 50px;"></canvas>
       </div>
     </div>

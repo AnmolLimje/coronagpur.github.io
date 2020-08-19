@@ -3,6 +3,9 @@ HOSTAPI = "https://anmolhub.online/services/wcf/CoronavirusIndia/CoronavirusIndi
 HOSTAPI_Delta = "https://anmolhub.online/services/wcf/CoronavirusIndia/CoronavirusIndia.svc/getDeltaData";
 HOSTAPI_History = "https://anmolhub.online/services/wcf/CoronavirusIndia/CoronavirusIndia.svc/getHistoryCollection";
 
+HOSTAPI_NMC_TodayCase = "http://anmolhub.online/service/wcf/CoroNagpurOfficial/CoroNagpur/getTodayCases";
+HOSTAPI_NMC_AreaWise = "http://anmolhub.online/service/wcf/CoroNagpurOfficial/CoroNagpur/getAreaWiseCasesList";
+
 //Debugging
 //HOSTAPI = "http://localhost:50385/CoronavirusIndia.svc/getData";
 //HOSTAPI_Delta = "http://localhost:50385/CoronavirusIndia.svc/getDeltaData";
@@ -21,13 +24,13 @@ fetch(HOSTAPI)
             cured = document.querySelector("#cured");
             infected = document.querySelector("#infected");
             death = document.querySelector("#death");
-            total = document.querySelector('#total');
+            //total = document.querySelector('#total');
 
             active.innerHTML = nagpurdata.active;
             cured.innerHTML = nagpurdata.recovered;
             infected.innerHTML = nagpurdata.confirmed;
             death.innerHTML = nagpurdata.deceased;
-            total.innerHTML = (nagpurdata.active + nagpurdata.recovered + nagpurdata.confirmed + nagpurdata.deceased);
+            //total.innerHTML = (nagpurdata.active + nagpurdata.recovered + nagpurdata.confirmed + nagpurdata.deceased);
 
             //document.body.innerHTML = JSON.stringify(nagpurdata);
         })
@@ -332,6 +335,55 @@ fetch(HOSTAPI_History)
                 data: dataRecovered,
                 options: optionsRecovered
             });
+
+        })
+    })
+
+fetch(HOSTAPI_NMC_TodayCase)
+    .then((response) => {
+        response.json().then((data) => {
+            nagpurdata = data;
+            //console.log(data);
+
+            total_active = document.querySelector("#nmc_total_active");
+            positive = document.querySelector("#nmc_positive");
+            recovered = document.querySelector("#nmc_recovered");
+            negative = document.querySelector("#nmc_negative");
+            death = document.querySelector('#nmc_death');
+            positive_commulative = document.querySelector("#nmc_positive_commulative");
+            recovered_commulative = document.querySelector("#nmc_recovered_commulative");
+            negative_commulative = document.querySelector("#nmc_negative_commulative");
+            death_commulative = document.querySelector("#nmc_death_commulative");
+            update = document.querySelector("#nmc_last_update");
+
+            total_active.innerHTML = nagpurdata.TOTAL_ACTIVE;
+            positive.innerHTML = nagpurdata.TODAY_POSITIVES;
+            recovered.innerHTML = nagpurdata.TODAY_RECOVERED;
+            negative.innerHTML = nagpurdata.TODAY_NEGATIVES;
+            death.innerHTML = nagpurdata.TODAY_DEATHS;
+            positive_commulative.innerHTML = nagpurdata.TOTAL_POSITIVES_COMMULATIVE;
+            recovered_commulative.innerHTML = nagpurdata.TOTAL_RECOVERED_COMMULATIVE;
+            negative_commulative.innerHTML = nagpurdata.TOTAL_NEGATIVES_COMMULATIVE;
+            death_commulative.innerHTML = nagpurdata.TOTAL_DEATHS_COMMULATIVE;
+            update.innerHTML += ": " + nagpurdata.UPDATED_DATE;
+        })
+    })
+
+fetch(HOSTAPI_NMC_AreaWise)
+    .then((response) => {
+        response.json().then((data) => {
+            nagpurdata = data;
+            //console.log(data);
+            tableBody = document.querySelector("#areaWiseData");
+            for (let index = 0; index < nagpurdata.length; index++) {
+                //console.log(nagpurdata[index]);
+                tableBody.innerHTML += "<tr>"
+                    + "<th scope='row'><span class='table - td - title'>" + nagpurdata[index].AREA_NAME + "</th>"
+                    + "<td><span class='table - td - title'>" + nagpurdata[index].ACTIVE + "</td>"
+                    + "<td><span class='table - td - title'>" + nagpurdata[index].TOTAL_DEATH + "</td>"
+                    + "<td><span class='table - td - title'>" + nagpurdata[index].TOTAL_RECOVERED + "</td>"
+                    + "</tr>";
+            }
 
         })
     })

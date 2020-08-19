@@ -55,7 +55,7 @@ body {
 }
 
 .table-th{
-    font-size: 23px;
+    font-size: 2.3vh;
 }
 
 .table-th-title{
@@ -63,6 +63,7 @@ body {
 }
 
 .table-td-title{
+  font-size: 2vh;
     font-weight: 300;;
 }
 /**********************/
@@ -250,6 +251,14 @@ body {
 
 .custom-red{
     background-color: #DB7171;
+}
+
+.custom-neg{
+   background-color: #dbaa71;
+}
+
+.custom-pos{
+   background-color: #995151;
 }
 
 .custom-total{
