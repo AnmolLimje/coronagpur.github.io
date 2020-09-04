@@ -13,6 +13,26 @@ HOSTAPI_NMC_AreaWise = "https://anmolhub.online/service/wcf/CoroNagpurOfficial/C
 
 body = document.querySelector("body");
 
+function nFormatter(num, digits=1) {
+    var si = [
+        { value: 1, symbol: "" },
+        { value: 1E3, symbol: "k" },
+        { value: 1E6, symbol: "M" },
+        { value: 1E9, symbol: "G" },
+        { value: 1E12, symbol: "T" },
+        { value: 1E15, symbol: "P" },
+        { value: 1E18, symbol: "E" }
+    ];
+    var rx = /\.0+$|(\.[0-9]*[1-9])0+$/;
+    var i;
+    for (i = si.length - 1; i > 0; i--) {
+        if (num >= si[i].value) {
+        break;
+        }
+    }
+    return (num / si[i].value).toFixed(digits).replace(rx, "$1") + si[i].symbol;
+}
+
 fetch(HOSTAPI)
     .then((response) => {
         response.json().then((data) => {
@@ -343,7 +363,7 @@ fetch(HOSTAPI_NMC_TodayCase)
     .then((response) => {
         response.json().then((data) => {
             nagpurdata = data;
-            //console.log(data);
+            console.log(data);
 
             total_active = document.querySelector("#nmc_total_active");
             positive = document.querySelector("#nmc_positive");
@@ -383,9 +403,9 @@ fetch(HOSTAPI_NMC_AreaWise)
                 //console.log(nagpurdata[index]);
                 tableBody.innerHTML += "<tr>"
                     + "<th scope='row'><span class='table - td - title'>" + nagpurdata[index].AREA_NAME + "</th>"
-                    + "<td><span class='table - td - title'>" + nagpurdata[index].ACTIVE + "</td>"
-                    + "<td><span class='table - td - title'>" + nagpurdata[index].TOTAL_DEATH + "</td>"
-                    + "<td><span class='table - td - title'>" + nagpurdata[index].TOTAL_RECOVERED + "</td>"
+                    + "<td><span class='table - td - title'>" +nFormatter(nagpurdata[index].ACTIVE) + "</td>"
+                    + "<td><span class='table - td - title'>" +nFormatter(nagpurdata[index].TOTAL_DEATH) + "</td>"
+                    + "<td><span class='table - td - title'>" +nFormatter(nagpurdata[index].TOTAL_RECOVERED) + "</td>"
                     + "</tr>";
             }
 
