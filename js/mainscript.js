@@ -13,6 +13,10 @@ HOSTAPI_NMC_AreaWise = "https://anmolhub.online/service/wcf/CoroNagpurOfficial/C
 
 body = document.querySelector("body");
 
+const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
+  "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
+];
+
 function nFormatter(num, digits=1) {
     var si = [
         { value: 1, symbol: "" },
@@ -112,7 +116,9 @@ fetch(HOSTAPI_History)
                 if (delta_confirmed < CaseMin) { CaseMin = delta_confirmed; }
                 //console.log(CaseDate);
                 //console.log(delta_confirmed);
-                _CaseDate[index] = CaseDate;
+                var s = CaseDate;
+                var d = new Date(s);
+                _CaseDate[index] = monthNames[d.getMonth()] +" "+ d.getDate();;
                 _deltaConfirmed[index] = delta_confirmed;
                 _deltaDeceased[index] = delta_deceased;
                 _deltaRecovered[index] = delta_recovered;
