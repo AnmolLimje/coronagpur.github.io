@@ -76,6 +76,6 @@ Tracking the Covid-19 Impact on Nagpur Including Official NMC Nagpur Data Integr
  <hr/>
  
  <!--Volunteer Needed-->
- <h2><b>We Are Needing Information Based on Area-Wise Activity</b></h2>
+ <h2><b>We Are Needed Information Based on Area-Wise Activity</b></h2>
  <p>We need a volunteer who can get the information of <b>area-wise</b> acitivty and update it on directly <a href="https://docs.google.com/spreadsheets/d/1EAqiT-vKWVxGwe_8xk7fle5JzM1QYwGhgH_uLc-gpUA/edit?usp=sharing">Google Spreadsheet</a></p>
  <p>Please Refer any person who knows the correct information based on area-wise acivity</p>
